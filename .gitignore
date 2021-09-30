@@ -1,0 +1,4 @@
+node_modules
+.parcel-cache
+_site
+yarn-error.log

@@ -1,0 +1,42 @@
+{
+  "name": "ppblog",
+  "version": "1.0.0",
+  "author": "Zachary Skalko <zac_skalko@cargill.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@mdx-js/runtime": "^1.6.22",
+    "@parcel/config-default": "^2.0.0-rc.0",
+    "@parcel/core": "^2.0.0-rc.0",
+    "@parcel/fs": "^2.0.0-alpha.3",
+    "autoprefixer": "^10.3.4",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-styled-components": "^1.13.2",
+    "cssnano": "^5.0.8",
+    "esbuild": "^0.12.28",
+    "esbuild-runner": "^2.2.1",
+    "fuse.js": "^6.4.6",
+    "html-minifier-terser": "^6.0.2",
+    "mini-svg-data-uri": "^1.3.3",
+    "parcel": "^2.0.0-rc.0",
+    "postcss": "^8.3.6",
+    "postcss-class-name-shortener": "^1.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-twitter-embed": "^3.0.3",
+    "styled-components": "^5.3.1",
+    "twin.macro": "^2.7.0"
+  },
+  "scripts": {
+    "11ty": "babel-node --config-file=./11ty.babel.config.js ./node_modules/.bin/eleventy",
+    "parcel:build": "parcel build ./client/*.js --dist-dir _site/client",
+    "build": "yarn parcel:build && yarn 11ty"
+  }
+}
