@@ -43,6 +43,7 @@
   },
   "scripts": {
     "11ty": "babel-node --config-file=./11ty.babel.config.js ./node_modules/.bin/eleventy",
-    "build": "yarn 11ty"
+    "build": "yarn 11ty",
+    "publish": "(cd _site && git init && git add . && git commit -m \"Publish\" && git remote add origin git@github.com:zapplebee/zapplebee.github.io.git && git branch -M main && git push -u origin main --force)"
   }
 }
