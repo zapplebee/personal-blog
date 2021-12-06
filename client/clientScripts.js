@@ -27,18 +27,16 @@ const Svg = ({ offset }) => {
   );
 };
 
+function getOffset() {
+  return (Date.now() % 50000) / 50000;
+}
+
 export const DynamicHeader = () => {
-  const [offset, setOffset] = React.useState(0);
+  const [offset, setOffset] = React.useState(getOffset());
 
   React.useEffect(() => {
     function doIt() {
-      setOffset((o) => {
-        const newOffset = o + 0.000125;
-        if (newOffset >= 1) {
-          return 0;
-        }
-        return newOffset;
-      });
+      setOffset(getOffset());
       requestAnimationFrame(doIt);
     }
     doIt();
@@ -59,3 +57,5 @@ console.log(
   "%cLooks like you're trying to see how this webpage works. Why not have a look at the repository?",
   "font-size: 24px;letter-spacing:-1em; font-family: serif;"
 );
+
+console.log("https://github.com/zapplebee/personal-blog");
