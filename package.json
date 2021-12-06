@@ -12,9 +12,9 @@
     "@babel/preset-react": "^7.14.5",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@mdx-js/runtime": "^1.6.22",
-    "@parcel/config-default": "^2.0.0-rc.0",
-    "@parcel/core": "^2.0.0-rc.0",
-    "@parcel/fs": "^2.0.0-alpha.3",
+    "@parcel/config-default": "^2.0.1",
+    "@parcel/core": "2.0.1",
+    "@parcel/fs": "2.0.1",
     "autoprefixer": "^10.3.4",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-styled-components": "^1.13.2",
@@ -43,7 +43,6 @@
   },
   "scripts": {
     "11ty": "babel-node --config-file=./11ty.babel.config.js ./node_modules/.bin/eleventy",
-    "parcel:build": "parcel build ./client/*.js --dist-dir _site/client",
-    "build": "yarn parcel:build && yarn 11ty"
+    "build": "yarn 11ty"
   }
 }
