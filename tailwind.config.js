@@ -8,6 +8,9 @@ module.exports = {
       black: {
         DEFAULT: "#000000",
       },
+      brown: {
+        DEFAULT: "#332826",
+      },
       gray: {
         DEFAULT: "#bbbbbb",
       },
@@ -18,7 +21,7 @@ module.exports = {
         DEFAULT: "#125BE0",
       },
       purple: {
-        DEFAULT: "#4C0675",
+        DEFAULT: "#442b38",
       },
       orange: {
         DEFAULT: "#FF8800",
@@ -28,7 +31,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['"Jost"', "sans-serif"],
+      sans: ["Helvetica Neue", "sans-serif"],
       serif: [
         '"Adobe Garamond Pro"',
         "ui-serif",

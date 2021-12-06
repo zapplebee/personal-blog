@@ -1,55 +1,51 @@
 import React from "react";
-import { render } from "./../lib/render";
-import { ArticleLink } from "../lib/motifs";
-import tw from "twin.macro";
+import "twin.macro";
+import { defaultMotif } from "./../lib/motifs";
 
-const METADATA = {
-  permalink: "/",
-  ogImage: true,
-};
-
+const H1 = defaultMotif.h1;
+const H2 = defaultMotif.h2;
+const H3 = defaultMotif.h3;
+const P = defaultMotif.p;
 class Index {
   data() {
     return {
-      title: "Initial Page",
-      clientScripts: ["search", "articles"],
+      tags: [],
+      title: "aaa",
+      layout: "full",
+      summary: "The technology and personal blog of Zachary Skalko.",
     };
   }
 
   async render(data) {
-    const otherPages = data.collections.all.filter((item) => {
-      return item.data.page !== data.page;
-    });
-    const linkableOtherPages = otherPages.map((op) => {
-      return {
-        url: op.url,
-        description: op.data.description,
-        pubDate: op.data.pubDate,
-        keywords: op.data.keywords,
-        title: op.data.title,
-      };
-    });
+    const { all, post, ...restCollections } = data.collections;
+    return (
+      <div tw="p-16 m-auto">
+        <P>
+          hi. im zac skalko. im an engineer, specifically focused on the web.
+        </P>
 
-    return await render(
-      <>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ${JSON.stringify(
-              linkableOtherPages
-            )}`,
-          }}
-        />
-        <div id="search-container"></div>
-        <nav
-          tw="max-w-prose m-auto grid grid-cols-1 p-4 gap-4"
-          id="article-link-container"
-        >
-          {linkableOtherPages.map((p) => {
-            return <ArticleLink {...p} key={p.url} />;
-          })}
-        </nav>
-      </>,
-      data
+        {Object.entries(restCollections).map(([key, entries]) => {
+          return (
+            <div key={key} tw="p-4">
+              <H2 tw="border-b border-purple">{key.toLowerCase()}</H2>
+              <div tw="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-0 pt-4 pb-4 md:p-10">
+                {entries.map((p) => {
+                  return (
+                    <a
+                      href={p.url}
+                      key={p.url}
+                      tw="grid grid-cols-1 gap-2 text-gray visited:text-purple hocus:text-gold bg-brown p-4"
+                    >
+                      <H2 tw="color[inherit]!">{p.data.title}</H2>
+                      <P tw="color[inherit]!">{p.data.summary}</P>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 }
