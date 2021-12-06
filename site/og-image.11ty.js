@@ -2,8 +2,7 @@ import React from "react";
 import { theme } from "twin.macro";
 
 class Index {
-  data(...args) {
-    console.log(args);
+  data() {
     return {
       eleventyExcludeFromCollections: true,
       pagination: {
