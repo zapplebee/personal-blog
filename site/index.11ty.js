@@ -10,7 +10,7 @@ class Index {
   data() {
     return {
       tags: [],
-      title: "aaa",
+      title: "Home",
       layout: "full",
       summary: "The technology and personal blog of Zachary Skalko.",
     };
