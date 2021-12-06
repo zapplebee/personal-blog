@@ -1,7 +1,7 @@
 todo
 
 - [ ] fix minification spaghetti
-- [ ] favicon
+- [x] favicon
 - [ ] sync wave to performance.now for persistance between pages
 - [x] fix clippy url
 - [x] fix parcel/passthrough clobbering

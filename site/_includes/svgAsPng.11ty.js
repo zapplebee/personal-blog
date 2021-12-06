@@ -11,7 +11,12 @@ class SvgToPng {
     }
     const baseImage = sharp(Buffer.from(svgString));
     if (data.width) {
-      return baseImage.clone().resize({ width: data.width }).toBuffer();
+      return baseImage
+        .clone()
+        .resize({
+          width: typeof data.width === "number" ? data.width : data.width(data),
+        })
+        .toBuffer();
     } else {
       return baseImage.clone().toBuffer();
     }
