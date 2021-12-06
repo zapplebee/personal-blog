@@ -52,7 +52,7 @@ render(<DynamicHeader />, headerContainer);
 
 console.log(
   "%c         ",
-  'font-size: 100px;letter-spacing:-1em;background-size:contain;background-repeat: no-repeat;background-image: url("https://zapplebee.github.io/clippy.png")'
+  'font-size: 100px;letter-spacing:-1em;background-size:contain;background-repeat: no-repeat;background-image: url("https://zapplebee.github.io/public/clippy.png")'
 );
 
 console.log(
