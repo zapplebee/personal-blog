@@ -4,7 +4,10 @@ import { theme } from "twin.macro";
 class Index {
   data() {
     return {
-      sizes: [180, 32, 16, 96, 57, 114, 72, 144, 60, 120, 76, 152],
+      sizes:
+        process.env.NODE_ENV !== "production"
+          ? []
+          : [180, 32, 16, 96, 57, 114, 72, 144, 60, 120, 76, 152],
       pagination: {
         data: "sizes",
         size: 1,
