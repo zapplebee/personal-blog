@@ -2,18 +2,19 @@ todo
 
 - [ ] fix minification spaghetti
 - [x] favicon
-- [ ] sync wave to performance.now for persistance between pages
+- [x] sync wave to performance.now for persistance between pages
 - [x] fix clippy url
 - [x] fix parcel/passthrough clobbering
 - [ ] clean up dead dependencies
 - [ ] check outdated deps
-- [ ] add meta descrption
+- [x] add meta descrption
 - [ ] add correct title values
 - [ ] finish writing the first post
 - [ ] ~~publicize it.~~
 - [ ] squash everything
 - [ ] publicize it.
 - [ ] cleanup unused components
+- [x] add publish dates
 
 nice to haves
 
