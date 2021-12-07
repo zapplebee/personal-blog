@@ -7,7 +7,7 @@ import { render } from "../../lib/page";
 import { getPubDates } from "../../lib/pubDate";
 import { DateTime } from "luxon";
 
-const Article = tw.article`pl-4 pr-4 max-w-prose md:max-width[120ch] m-auto pt-4 pb-4 grid grid-cols-1 gap-6`;
+const Article = tw.article`pl-4 pr-4 max-w-prose md:max-width[120ch] m-auto pt-4 pb-4 grid grid-cols-1 gap-6 mb-32`;
 
 class Post {
   async render(data) {
